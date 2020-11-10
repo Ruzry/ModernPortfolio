@@ -36,3 +36,44 @@ function toggleMenu(){
     }
 
 }
+
+
+var slideIndex = 0;
+showDivs(slideIndex);
+
+//function plusDivs(n) {
+   //showDivs((slideIndex - 1) += n);
+
+//}
+
+//function currentDiv(n){
+  //  showDivs((slideIndex - 1) = n)
+
+//}
+
+function showDivs(n){
+
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+
+    if (n > x.length){
+        slideIndex = 0;
+    }
+
+    if (n < 0) {
+        slideIndex = x.length;
+    }
+
+    for (i = 0; i < x.length; i++){
+
+        x[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace("w3-white", "");
+    }
+
+    x[slideIndex].style.display = "block";
+    dots[slideIndex].className += "w3-white";
+}

@@ -169,6 +169,39 @@ main{
     }
 }
 
+//Project Pages
+
+.mySlides {
+    display:none;
+    width: 33hh;
+    height: 33vh;
+}
+
+//.w3-left, .w3-right, .w3-badge {cursor: pointer;}
+//.w3-badge {height: 13px; width: 13px; padding: 0;}
+
+.project-details{
+
+    display: grid;
+    align-items: center;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'slideShow projectDescription projectDescription' ;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    .slide-show{
+        grid-area: slideShow;
+
+    }
+
+    .project-description{
+        grid-area: projectDescription;
+        font-size: 1.5rem;
+    }
+    
+}
+
 // Button Styles
 .btn {
     display: block;

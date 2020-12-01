@@ -169,17 +169,7 @@ main{
     }
 }
 
-//Project Pages
-
-.mySlides {
-    display:none;
-    width: 33hh;
-    height: 33vh;
-}
-
-//.w3-left, .w3-right, .w3-badge {cursor: pointer;}
-//.w3-badge {height: 13px; width: 13px; padding: 0;}
-
+//Project with slides Pages
 .project-details{
 
     display: grid;
@@ -193,6 +183,75 @@ main{
     .slide-show{
         grid-area: slideShow;
 
+        grid-template-areas: 
+        'image image image image image image'
+        'left . choice1 choice2 choice3 . right'
+        ;
+        width: 33hh;
+        height: 33vh;
+
+        .mySlides {
+            display:none;
+
+            width: 33hh;
+            height: 33vh;
+        }
+
+        .w3-left, .w3-right, .w3-badge {
+            cursor:pointer
+        }
+        .w3-badge {
+            
+            height:13px;
+            width:13px;
+            padding:0;
+            
+        }
+
+        .imageTrack1{
+
+            height:13px;
+            width:13px;
+            padding:0;
+
+            align-items: center;
+            
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+
+            }
+        }
+
+        .imageTrack2{
+
+            height:13px;
+            width:13px;
+            padding:0;
+
+            align-items: center;
+            
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+
+            }
+        }
+
+        .imageTrack3{
+
+            height:13px;
+            width:13px;
+            padding:0;
+
+            align-items: center;
+            
+            &:hover{
+                color: $secondary-color;
+                @include easeOut();
+
+            }
+        }
     }
 
     .project-description{

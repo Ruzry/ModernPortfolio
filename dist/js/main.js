@@ -41,15 +41,15 @@ function toggleMenu(){
 var slideIndex = 0;
 showDivs(slideIndex);
 
-//function plusDivs(n) {
-   //showDivs((slideIndex - 1) += n);
+function plusDivs(n) {
+   showDivs(slideIndex += n);
 
-//}
+}
 
-//function currentDiv(n){
-  //  showDivs((slideIndex - 1) = n)
+function currentDiv(n) {
+    showDivs(slideIndex = n);
 
-//}
+}
 
 function showDivs(n){
 

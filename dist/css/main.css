@@ -209,11 +209,6 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.mySlides {
-  display: none;
-  width: 33hh;
-  height: 33vh; }
-
 .project-details {
   display: grid;
   align-items: center;
@@ -221,7 +216,44 @@ main {
   grid-template-areas: 'slideShow projectDescription projectDescription';
   grid-template-columns: repeat(3, 1fr); }
   .project-details .slide-show {
-    grid-area: slideShow; }
+    grid-area: slideShow;
+    grid-template-areas: 'image image image image image image' 'left . choice1 choice2 choice3 . right';
+    width: 33hh;
+    height: 33vh; }
+    .project-details .slide-show .mySlides {
+      display: none;
+      width: 33hh;
+      height: 33vh; }
+    .project-details .slide-show .w3-left, .project-details .slide-show .w3-right, .project-details .slide-show .w3-badge {
+      cursor: pointer; }
+    .project-details .slide-show .w3-badge {
+      height: 13px;
+      width: 13px;
+      padding: 0; }
+    .project-details .slide-show .imageTrack1 {
+      height: 13px;
+      width: 13px;
+      padding: 0;
+      align-items: center; }
+      .project-details .slide-show .imageTrack1:hover {
+        color: #c94eee;
+        transition: all 0.5s ease-out; }
+    .project-details .slide-show .imageTrack2 {
+      height: 13px;
+      width: 13px;
+      padding: 0;
+      align-items: center; }
+      .project-details .slide-show .imageTrack2:hover {
+        color: #c94eee;
+        transition: all 0.5s ease-out; }
+    .project-details .slide-show .imageTrack3 {
+      height: 13px;
+      width: 13px;
+      padding: 0;
+      align-items: center; }
+      .project-details .slide-show .imageTrack3:hover {
+        color: #c94eee;
+        transition: all 0.5s ease-out; }
   .project-details .project-description {
     grid-area: projectDescription;
     font-size: 1.5rem; }

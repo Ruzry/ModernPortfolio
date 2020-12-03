@@ -39,41 +39,58 @@ function toggleMenu(){
 
 
 var slideIndex = 0;
-showDivs(slideIndex);
+selectImage(slideIndex);
 
-function plusDivs(n) {
-   showDivs(slideIndex += n);
+/**
+ * Change the image div by inputting -1 to decrement or 1 to increment
+ * @param n The increment/decrement value. Must be 1 or -1.
+ */
+function changeImage(n) { 
+
+    var dots = document.getElementsByClassName("demo");
+    var imageAmount = dots.length;
+
+    if ((slideIndex + n) >= 0 && (slideIndex + n) < imageAmount){
+
+        slideIndex += n;
+        showImage(slideIndex); 
+    }
+}
+
+/**
+ * Select the image to display with the index number of the image.
+ * @param n int corresponding to the slide index.
+ */
+function selectImage(n) {
+    showImage(slideIndex = n);
 
 }
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-
-}
-
-function showDivs(n){
+/**
+ * Function adds and removes the current tag and alters
+ * the display style so only the selected image is showing.
+ * @param n The index for the image to be shown.
+ */
+function showImage(n){
 
     var i;
     var x = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
+    var imageAmount = dots.length;
 
-    if (n > x.length){
-        slideIndex = 0;
-    }
-
-    if (n < 0) {
-        slideIndex = x.length;
-    }
+    //console.log(imageAmount);
+    //console.log(slideIndex);
 
     for (i = 0; i < x.length; i++){
 
-        x[i].style.display = "none";
+         x[i].style.display = "none";
     }
 
     for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace("w3-white", "");
+        dots[i].className = dots[i].className.replace("current", "");
     }
 
-    x[slideIndex].style.display = "block";
-    dots[slideIndex].className += "w3-white";
+    x[slideIndex].style.display = "inline";
+    dots[slideIndex].className += "current";
+    
 }

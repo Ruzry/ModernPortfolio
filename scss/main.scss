@@ -183,39 +183,36 @@ main{
     .slide-show{
         grid-area: slideShow;
 
+        display: grid;
+
         grid-template-areas: 
-        'image image image image image image'
-        'left . choice1 choice2 choice3 . right'
-        ;
-        width: 33hh;
+        'image image image image image image image'
+        'image image image image image image image'
+        'image image image image image image image'
+        'left . . choices . . right';
+        
+        grid-template-columns: repeat(7, 3fr);
+
+        width: 33vw;
         height: 33vh;
 
         .mySlides {
             display:none;
 
-            width: 33hh;
+            grid-area: image;
+
+            width: 100%;
             height: 33vh;
         }
 
-        .w3-left, .w3-right, .w3-badge {
-            cursor:pointer
-        }
-        .w3-badge {
-            
-            height:13px;
-            width:13px;
-            padding:0;
-            
-        }
-
-        .imageTrack1{
-
+        .leftArrow, .rightArrow {
+            cursor:pointer;
             height:13px;
             width:13px;
             padding:0;
 
-            align-items: center;
-            
+            align-self: end;
+
             &:hover{
                 color: $secondary-color;
                 @include easeOut();
@@ -223,36 +220,60 @@ main{
             }
         }
 
-        .imageTrack2{
+        .leftArrow{
+            grid-area: left;
+        }
 
-            height:13px;
-            width:13px;
-            padding:0;
-
-            align-items: center;
+        .rightArrow{
+            grid-area: right;
             
-            &:hover{
-                color: $secondary-color;
-                @include easeOut();
+            justify-self: end;
+        }
 
+        .choices{
+            grid-area: choices;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-areas: 
+            'choice1 choice2 choice3';
+            justify-self: center;
+            align-self: end;
+            .imageChoice1, .imageChoice2, .imageChoice3{
+
+                height:13px;
+                width:13px;
+                padding:0;
+    
+                align-items: initial;
+                cursor:pointer;
+    
+                &:hover{
+                    color: $secondary-color;
+                    @include easeOut();
+    
+                }
+
+                &.current{
+                    color: $secondary-color;
+
+                }
+            }
+    
+            .imageChoice1{
+                grid-area: choice1;
+            }
+    
+            .imageChoice2{
+                grid-area: choice2;
+            }
+    
+            .imageChoice3{
+                grid-area: choice3;
             }
         }
 
-        .imageTrack3{
-
-            height:13px;
-            width:13px;
-            padding:0;
-
-            align-items: center;
-            
-            &:hover{
-                color: $secondary-color;
-                @include easeOut();
-
-            }
-        }
     }
+
 
     .project-description{
         grid-area: projectDescription;

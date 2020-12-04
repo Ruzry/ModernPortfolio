@@ -198,10 +198,10 @@ main{
 
         .mySlides {
             display:none;
-
+            border: 3px #fff solid;
             grid-area: image;
-
-            width: 100%;
+            justify-self: center;
+            //width: 100%;
             height: 33vh;
         }
 
@@ -230,15 +230,33 @@ main{
             justify-self: end;
         }
 
+        .choices.two{
+            grid-template-areas: 
+            'choice1 choice2'; 
+        }
+
+        .choices.three{
+            grid-template-areas: 
+            'choice1 choice2 choice3';
+        }
+
+        .choices.eight{
+
+            grid-template-areas: 
+            'choice1 choice2 choice3 choice4 choice5 choice6 choice7 choice8';
+        }
+
         .choices{
             grid-area: choices;
             display: grid;
             grid-gap: 5px;
-            grid-template-areas: 
-            'choice1 choice2 choice3';
+
             justify-self: center;
             align-self: end;
-            .imageChoice1, .imageChoice2, .imageChoice3{
+
+            .imageChoice1, .imageChoice2, .imageChoice3, .imageChoice4, .imageChoice5,
+            .imageChoice6, .imageChoice7, .imageChoice8
+            {
 
                 height:13px;
                 width:13px;
@@ -250,12 +268,10 @@ main{
                 &:hover{
                     color: $secondary-color;
                     @include easeOut();
-    
                 }
 
                 &.current{
                     color: $secondary-color;
-
                 }
             }
     
@@ -270,10 +286,29 @@ main{
             .imageChoice3{
                 grid-area: choice3;
             }
+
+            .imageChoice4{
+                grid-area: choice4;
+            }
+
+            .imageChoice5{
+                grid-area: choice5;
+            }
+
+            .imageChoice6{
+                grid-area: choice6;
+            }
+
+            .imageChoice7{
+                grid-area: choice7;
+            }
+
+            .imageChoice8{
+                grid-area: choice8;
+            }
         }
 
     }
-
 
     .project-description{
         grid-area: projectDescription;

@@ -224,8 +224,9 @@ main {
     height: 33vh; }
     .project-details .slide-show .mySlides {
       display: none;
+      border: 3px #fff solid;
       grid-area: image;
-      width: 100%;
+      justify-self: center;
       height: 33vh; }
     .project-details .slide-show .leftArrow, .project-details .slide-show .rightArrow {
       cursor: pointer;
@@ -241,23 +242,31 @@ main {
     .project-details .slide-show .rightArrow {
       grid-area: right;
       justify-self: end; }
+    .project-details .slide-show .choices.two {
+      grid-template-areas: 'choice1 choice2'; }
+    .project-details .slide-show .choices.three {
+      grid-template-areas: 'choice1 choice2 choice3'; }
+    .project-details .slide-show .choices.eight {
+      grid-template-areas: 'choice1 choice2 choice3 choice4 choice5 choice6 choice7 choice8'; }
     .project-details .slide-show .choices {
       grid-area: choices;
       display: grid;
       grid-gap: 5px;
-      grid-template-areas: 'choice1 choice2 choice3';
       justify-self: center;
       align-self: end; }
-      .project-details .slide-show .choices .imageChoice1, .project-details .slide-show .choices .imageChoice2, .project-details .slide-show .choices .imageChoice3 {
+      .project-details .slide-show .choices .imageChoice1, .project-details .slide-show .choices .imageChoice2, .project-details .slide-show .choices .imageChoice3, .project-details .slide-show .choices .imageChoice4, .project-details .slide-show .choices .imageChoice5,
+      .project-details .slide-show .choices .imageChoice6, .project-details .slide-show .choices .imageChoice7, .project-details .slide-show .choices .imageChoice8 {
         height: 13px;
         width: 13px;
         padding: 0;
         align-items: initial;
         cursor: pointer; }
-        .project-details .slide-show .choices .imageChoice1:hover, .project-details .slide-show .choices .imageChoice2:hover, .project-details .slide-show .choices .imageChoice3:hover {
+        .project-details .slide-show .choices .imageChoice1:hover, .project-details .slide-show .choices .imageChoice2:hover, .project-details .slide-show .choices .imageChoice3:hover, .project-details .slide-show .choices .imageChoice4:hover, .project-details .slide-show .choices .imageChoice5:hover,
+        .project-details .slide-show .choices .imageChoice6:hover, .project-details .slide-show .choices .imageChoice7:hover, .project-details .slide-show .choices .imageChoice8:hover {
           color: #c94eee;
           transition: all 0.5s ease-out; }
-        .project-details .slide-show .choices .imageChoice1.current, .project-details .slide-show .choices .imageChoice2.current, .project-details .slide-show .choices .imageChoice3.current {
+        .project-details .slide-show .choices .imageChoice1.current, .project-details .slide-show .choices .imageChoice2.current, .project-details .slide-show .choices .imageChoice3.current, .project-details .slide-show .choices .imageChoice4.current, .project-details .slide-show .choices .imageChoice5.current,
+        .project-details .slide-show .choices .imageChoice6.current, .project-details .slide-show .choices .imageChoice7.current, .project-details .slide-show .choices .imageChoice8.current {
           color: #c94eee; }
       .project-details .slide-show .choices .imageChoice1 {
         grid-area: choice1; }
@@ -265,6 +274,16 @@ main {
         grid-area: choice2; }
       .project-details .slide-show .choices .imageChoice3 {
         grid-area: choice3; }
+      .project-details .slide-show .choices .imageChoice4 {
+        grid-area: choice4; }
+      .project-details .slide-show .choices .imageChoice5 {
+        grid-area: choice5; }
+      .project-details .slide-show .choices .imageChoice6 {
+        grid-area: choice6; }
+      .project-details .slide-show .choices .imageChoice7 {
+        grid-area: choice7; }
+      .project-details .slide-show .choices .imageChoice8 {
+        grid-area: choice8; }
   .project-details .project-description {
     grid-area: projectDescription;
     font-size: 1.5rem; }

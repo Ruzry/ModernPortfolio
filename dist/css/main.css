@@ -209,6 +209,22 @@ main {
       .boxes div:hover span {
         color: #000; }
 
+.video-project-details {
+  display: grid;
+  align-items: center;
+  grid-gap: 30px;
+  grid-template-areas: 'video projectDescription projectDescription'  'projectDescription2 projectDescription2 projectDescription2';
+  grid-template-columns: repeat(3, 1fr);
+  height: 33vh; }
+  .video-project-details .youtube {
+    grid-area: video; }
+  .video-project-details .project-description {
+    grid-area: projectDescription;
+    font-size: 1.5rem; }
+  .video-project-details .project-description-two {
+    grid-area: projectDescription2;
+    font-size: 1.5rem; }
+
 .project-details {
   display: grid;
   align-items: center;
@@ -367,4 +383,7 @@ main {
   .projects {
     grid-template-columns: 1fr; }
   .boxes div {
-    padding: 3.5rem 2.5rem; } }
+    padding: 3.5rem 2.5rem; }
+  .video-project-details {
+    grid-template-areas: 'video'  'projectDescription'  'projectDescription2';
+    grid-template-columns: repeat(1, 1fr); } }

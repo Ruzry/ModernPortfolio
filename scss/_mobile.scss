@@ -110,5 +110,13 @@
         }
     }
 
-    
+    .video-project-details{
+        grid-template-areas: 
+        'video' 
+        'projectDescription' 
+        'projectDescription2'
+        ;
+
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

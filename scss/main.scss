@@ -169,6 +169,38 @@ main{
     }
 }
 
+//Project with a Youtube Video
+.video-project-details{
+    display: grid;
+    align-items: center;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'video projectDescription projectDescription' 
+    'projectDescription2 projectDescription2 projectDescription2'
+    ;
+
+    grid-template-columns: repeat(3, 1fr);
+    //grid-template-rows: repeat(10, 1fr);
+    //width: 33vw;
+    height: 33vh;
+
+    .youtube{
+        grid-area: video;
+    }
+
+    .project-description{
+        grid-area: projectDescription;
+        font-size: 1.5rem;
+    }
+
+    .project-description-two{
+        grid-area: projectDescription2;
+        font-size: 1.5rem;
+    }
+}
+
+
+
 //Project with slides Pages
 .project-details{
 

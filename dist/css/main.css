@@ -214,10 +214,11 @@ main {
   align-items: center;
   grid-gap: 30px;
   grid-template-areas: 'video projectDescription projectDescription'  'projectDescription2 projectDescription2 projectDescription2';
-  grid-template-columns: repeat(3, 1fr);
-  height: 33vh; }
+  grid-template-columns: repeat(3, 1fr); }
   .video-project-details .youtube {
-    grid-area: video; }
+    grid-area: video;
+    width: 33vw;
+    height: 33vh; }
   .video-project-details .project-description {
     grid-area: projectDescription;
     font-size: 1.5rem; }
@@ -229,7 +230,7 @@ main {
   display: grid;
   align-items: center;
   grid-gap: 30px;
-  grid-template-areas: 'slideShow projectDescription projectDescription';
+  grid-template-areas: 'slideShow projectDescription projectDescription'  'projectDescription2 projectDescription2 projectDescription2';
   grid-template-columns: repeat(3, 1fr); }
   .project-details .slide-show {
     grid-area: slideShow;
@@ -243,6 +244,7 @@ main {
       border: 3px #fff solid;
       grid-area: image;
       justify-self: center;
+      max-width: 100%;
       height: 33vh; }
     .project-details .slide-show .leftArrow, .project-details .slide-show .rightArrow {
       cursor: pointer;
@@ -303,6 +305,9 @@ main {
   .project-details .project-description {
     grid-area: projectDescription;
     font-size: 1.5rem; }
+  .project-details .project-description-two {
+    grid-area: projectDescription2;
+    font-size: 1.5rem; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -322,17 +327,20 @@ main {
   color: #333; }
 
 #main-footer {
+  position: fixed;
+  bottom: 0;
   text-align: center;
   padding: 1rem;
   background: #323232;
   color: #fff;
-  height: 60px; }
+  height: 60px;
+  width: 100%; }
 
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (mind-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
@@ -365,12 +373,18 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   .project-details {
-    grid-template-areas: 'slideShow' 'projectDescription';
+    grid-template-areas: 'slideShow' 'projectDescription' 'projectDescription2';
     grid-template-columns: 1fr; }
     .project-details .slide-show {
       align-items: center;
+      justify-self: center;
       width: 100%;
-      height: 100%; } }
+      height: 100%; }
+  .video-project-details {
+    grid-template-areas: 'video'  'projectDescription'  'projectDescription2';
+    grid-template-columns: 1fr; }
+    .video-project-details .youtube {
+      width: 100%; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -383,7 +397,7 @@ main {
   .projects {
     grid-template-columns: 1fr; }
   .boxes div {
-    padding: 3.5rem 2.5rem; }
-  .video-project-details {
-    grid-template-areas: 'video'  'projectDescription'  'projectDescription2';
-    grid-template-columns: repeat(1, 1fr); } }
+    font-size: 1rem;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    height: 100%; } }
